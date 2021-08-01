@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Gugustinette Web Pack | Switch</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: 'SF Pro';
+                font-size: 1em;
+            }
+
+            body {
+                width: 100vw;
+                height: 100vh;
+                background-color: #121212;
+                display: grid;
+                justify-items: center;
+                align-items: center;
+            }
+
+            .styled::part(switch_background) {
+                background: rgb(60, 186, 79);
+            }
+
+        </style>
+        
+        <script type="module" src="../setup/gus_ui.js"></script>
+        
+        <script type="module" src="gus_header/gus_header.js"></script>
+        <script type="module" src="gus_title/gus_title.js"></script>
+        <script type="module" src="gus_paragraph/gus_paragraph.js"></script>
+        <script type="module" src="gus_sub_paragraph/gus_sub_paragraph.js"></script>
+    </head>
+    <body>
+        <gus-ui>
+            <gus-header>Header</gus-header>
+
+            <gus-title>Title</gus-title>
+            <gus-paragraph>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga aut voluptate impedit natus ullam illum, vitae rem aliquam unde molestias eaque commodi quibusdam facere ex maxime atque reiciendis reprehenderit cupiditate. Rerum voluptate, minima accusantium error repudiandae impedit possimus, doloremque sint voluptatibus minus, incidunt sunt fugiat soluta ipsa numquam in eius sit similique officiis placeat laborum nesciunt aut autem neque! Earum quas omnis ea harum? Id, similique? Quisquam aliquam, cumque tenetur iusto architecto, impedit suscipit est minus ab voluptate quaerat sed!</gus-paragraph>
+            
+            <gus-sub-paragraph>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, aliquam!</gus-sub-paragraph>
+        </gus-ui>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Gugustinette Web Pack | Date Picker</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: 'SF Pro';
+                font-size: 1em;
+                color: whitesmoke;
+            }
+
+            body {
+                width: 100vw;
+                height: 100vh;
+                background-color: #121212;
+                display: grid;
+                justify-items: center;
+                align-items: center;
+            }
+        </style>
+        <script type="module" src="JS/gus_date_picker.js"></script>
+        <script type="module" src="../../special_components/gus_focus_window/JS/gus_focus_window.js"></script>
+        <script type="module" src="../../basic_components/gus_slider/JS/gus_slider.js"></script>
+    </head>
+    <body>
+        <p id="date_picker_status">Selected Date : </p>
+        <gus-date-picker id="date_picker" lang="fr"></gus-date-picker>
+    </body>
+    <script src='example.js'></script>
+</html>

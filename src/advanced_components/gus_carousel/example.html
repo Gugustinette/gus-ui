@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Gugustinette Web Pack | Carousel</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: 'SF Pro';
+                font-size: 1em;
+                color: whitesmoke;
+            }
+
+            body {
+                width: 100vw;
+                height: 100vh;
+                background-color: #121212;
+                display: grid;
+                justify-items: center;
+                align-items: center;
+            }
+            
+        </style>
+        <script type="module" src="JS/gus_carousel.js"></script>
+    </head>
+    <body>
+        <gus-carousel image-collection='
+        ["images/gugustinette_img1.png",
+        "images/gugustinette_img2.png",
+        "images/gugustinette_img3.jpg"
+        ]' infinite="true" auto-scrolling="true">
+        </gus-carousel>
+    </body>
+</html>

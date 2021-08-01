@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Gugustinette Web Pack | Card</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: 'SF Pro';
+                font-size: 1em;
+            }
+
+            body {
+                width: 100vw;
+                height: 100vh;
+                background-color: #121212;
+                display: grid;
+                justify-items: center;
+                align-items: center;
+            }
+
+            gus-button::part(button) {
+                margin-right: 5px;
+                margin-bottom: 5px;
+            }
+        </style>
+        
+        <script type="module" src="JS/gus_card.js"></script>
+        <script type="module" src="../../basic_components/gus_button/JS/gus_button.js"></script>
+    </head>
+    <body>
+
+        <gus-card
+            label-title="Gugustinette"
+            label-description="Un gars super"
+            >
+        </gus-card>
+
+        <gus-card
+            media="images/SpaceWOUAH.jpg" 
+            label-title="Gugustinette"
+            label-description="Un gars super"
+            label-text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi architecto eligendi repellendus consectetur soluta iusto, deleniti et dolor reiciendis quas accusamus!"
+            >
+            <gus-button content="Ok" noborder="true"></gus-button>
+            <gus-button content="Cancel" noborder="true"></gus-button>
+        </gus-card>
+
+    </body>
+</html>

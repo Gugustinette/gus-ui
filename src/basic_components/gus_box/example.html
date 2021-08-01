@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Gugustinette Web Pack | Box</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: 'SF Pro';
+                font-size: 1em;
+                color: whitesmoke;
+            }
+
+            body {
+                width: 100vw;
+                height: 100vh;
+                background-color: #121212;
+                display: grid;
+                justify-items: center;
+                align-items: center;
+            }
+
+            .styled{
+                display: grid;
+                height: 200px;
+                justify-items: center;
+                align-items: center;
+            }
+        </style>
+        <script type="module" src="JS/gus_box.js"></script>
+    </head>
+    <body>
+        <gus-box content="Basic"></gus-box>
+
+        <gus-box></gus-box>
+
+        <gus-box content="Clickable" href="https://twitter.com/gugustinette"></gus-box>
+
+        <gus-box>
+            <div class="styled">
+                <p>Custom</p>
+                <img src="../assets/icon_home.png" alt="icon_home" width="80px">
+            </div>
+        </gus-box>
+        
+    </body>
+</html>

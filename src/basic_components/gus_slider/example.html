@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Gugustinette Web Pack | Slider</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: 'SF Pro';
+                font-size: 1em;
+                color: whitesmoke;
+            }
+
+            body {
+                width: 100vw;
+                height: 100vh;
+                background-color: #121212;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                justify-items: center;
+                align-items: center;
+            }
+
+        </style>
+        <script type="module" src="JS/gus_slider.js"></script>
+    </head>
+    <body>
+        <gus-slider></gus-slider>
+        <div>
+            <gus-slider id="slider_example" selected-value="Elem 3" elements='["Elem 1", "Elem 2", "Elem 3", "Elem 4", "Elem 5"]'></gus-slider>
+            <p id="selected_value">Selected Value : </p>
+        </div>
+        <gus-slider type="int"></gus-slider>
+        <gus-slider type="int" int-start="10" int-range="[-80, 80]" hide-scrollbar="true"></gus-slider>
+    </body>
+    <script src='example.js'></script>
+</html>

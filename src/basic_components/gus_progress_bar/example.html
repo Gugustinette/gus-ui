@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Gugustinette Web Pack | Progress Bar</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: 'SF Pro';
+                font-size: 1em;
+            }
+
+            body {
+                width: 100vw;
+                height: 100vh;
+                background-color: #121212;
+                display: grid;
+                justify-items: center;
+                align-items: center;
+            }
+
+            gus-progress-bar.styled::part(progress_bar) {
+                background: whitesmoke;
+            }
+
+            gus-progress-bar.styled::part(progress_bar_filler) {
+                background: rgb(60, 186, 79);
+            }
+
+            gus-progress-bar.styled-border::part(progress_bar) {
+                border-radius: 5px;
+            }
+
+            gus-progress-bar.styled-border::part(progress_bar_filler) {
+                border-radius: 5px;
+            }
+
+            gus-progress-bar.styled::part(progress_bar_display) {
+                color: black;
+            }
+        </style>
+        <script type="module" src="JS/gus_progress_bar.js"></script>
+    </head>
+    <body>
+        <gus-progress-bar filling="70"></gus-progress-bar>
+
+        <gus-progress-bar display="true" id="progress_bar_example_1"></gus-progress-bar>
+
+        <gus-progress-bar filling="100" max-filling="120" display="true" class="styled styled-border"></gus-progress-bar>
+        
+        <gus-progress-bar filling="80" class="styled" display="true" to-display="Progress Bar Status"></gus-progress-bar>
+    </body>
+    <script src='example.js'></script>
+</html>

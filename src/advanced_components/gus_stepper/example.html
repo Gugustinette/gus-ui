@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Gugustinette Web Pack | Stepper</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: 'SF Pro';
+                font-size: 1em;
+                color: whitesmoke;
+            }
+
+            body {
+                width: 100vw;
+                height: 100vh;
+                background-color: #121212;
+                display: grid;
+                justify-items: center;
+                align-items: center;
+            }
+
+        </style>
+        <script type="module" src="JS/gus_stepper.js"></script>
+    </head>
+    <body>
+        <gus-stepper orientation="vertical" step-link="full" steps='[
+        {"title": "Step 1", "content": "A"},
+        {"title": "Step 2"}, 
+        {"title": "Step 3"}, 
+        {"title": "Step 4"},
+        {"title": "Step 5"}
+        ]' id="gus-stepper-test">
+        </gus-stepper>
+        <script src="example.js"></script>
+    </body>
+</html>

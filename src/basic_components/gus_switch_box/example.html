@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Gugustinette Web Pack | Switch Box</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: 'SF Pro';
+                font-size: 1em;
+            }
+
+            body {
+                width: 100vw;
+                height: 100vh;
+                background-color: #121212;
+                display: grid;
+                justify-items: center;
+                align-items: center;
+            }
+
+            gus-switch-box.styled::part(switch) {
+                width: 400px;
+                height: 200px;
+                background: rgb(60, 186, 79);
+            }
+        </style>
+        <script type="module" src="JS/gus_switch_box.js"></script>
+    </head>
+    <body>
+        <!--Switch On-->
+        <gus-switch-box content="State 1" checked="true" id="switch_example_1"></gus-switch-box>
+
+        <!--Switch Off-->
+        <gus-switch-box content="State 2" checked="false" class="styled"></gus-switch-box>
+
+        <!--Switch Disabled-->
+        <gus-switch-box content="State 3" checked="false" disabled="true"></gus-switch-box>
+    </body>
+    <script src='example.js'></script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Gugustinette Web Pack | Chips</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: 'SF Pro';
+                font-size: 1em;
+                color: whitesmoke;
+            }
+
+            body {
+                width: 100vw;
+                height: 100vh;
+                background-color: #121212;
+                display: grid;
+                justify-items: center;
+                align-items: center;
+            }
+
+            gus-chips.styled::part(chips) {
+                background: red;
+            }
+        </style>
+        <script type="module" src="JS/gus_chips.js"></script>
+    </head>
+    <body>
+        <gus-chips content="Truc"></gus-chips>
+        <gus-chips content="Truc cool" check-visible="true" ></gus-chips>
+        <gus-chips content="Truc super méga long oui" cross-visible="true" class="styled"></gus-chips>
+    </body>
+</html>

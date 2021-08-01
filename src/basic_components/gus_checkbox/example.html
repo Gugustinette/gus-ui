@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Gugustinette Web Pack | Check Box</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: 'SF Pro';
+                font-size: 1em;
+            }
+
+            body {
+                width: 100vw;
+                height: 100vh;
+                background-color: #121212;
+                display: grid;
+                justify-items: center;
+                align-items: center;
+            }
+
+            gus-checkbox.styled::part(checkbox) {
+                height: 50px;
+                width: 50px;
+                background: rgb(60, 186, 79);
+                border-color: rgb(60, 186, 79);
+            }
+        </style>
+        <script type="module" src="JS/gus_checkbox.js"></script>
+    </head>
+    <body>
+        <gus-checkbox></gus-checkbox>
+
+        <gus-checkbox checked="true"></gus-checkbox>
+
+        <gus-checkbox class="styled" content="Checkbox 1"></gus-checkbox>
+
+        <gus-checkbox class="styled" checked="true" content="Checkbox 2"></gus-checkbox>
+    </body>
+</html>

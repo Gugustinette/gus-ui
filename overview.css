@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    color: whitesmoke;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #121212;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.section_1 {
+    display: grid;
+    height: 100%;
+    width: 100vw;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.section_2 {
+    display: grid;
+    height: 100%;
+    width: 100vw;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.section_3 {
+    display: grid;
+    height: 100%;
+    width: 100vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.sub_section_1 {
+    display: grid;
+    height: 90%;
+    width: 80%;
+    grid-template-rows: 1fr 0.5fr 3fr;
+    justify-items: center;
+}
+
+.sub_section_1 div {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+hr {
+    width: 100%;
+    height: min-content;
+}
+
+#sidebar gus-box::part(box) {
+    height: 100px;
+}
+
+#show-sidebar::part(box) {
+    cursor: pointer;
+}
+
+#show-focus-window::part(box) {
+    cursor: pointer;
+}
+
+gus-textfield::part(textfield) {
+    height: 300px;
+    width: 400px;
+    font-family: 'SF Pro';
+}

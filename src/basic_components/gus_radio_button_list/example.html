@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Gugustinette Web Pack | Radio Button List</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: 'SF Pro';
+                font-size: 1em;
+            }
+
+            body {
+                width: 100vw;
+                height: 100vh;
+                background-color: #121212;
+                display: grid;
+                justify-items: center;
+                align-items: center;
+            }
+        </style>
+        <script type="module" src="../gus_radio_button/JS/gus_radio_button.js"></script>
+        <script type="module" src="JS/gus_radio_button_list.js"></script>
+    </head>
+    <body>
+        <gus-radio-button-list id="rblist-example">
+            <gus-radio-button content="State 1"></gus-radio-button>
+            <gus-radio-button content="State 2"></gus-radio-button>
+            <gus-radio-button content="State 3"></gus-radio-button>
+            <gus-radio-button content="State 4"></gus-radio-button>
+        </gus-radio-button-list>
+    </body>
+    <script src="example.js"></script>
+</html>

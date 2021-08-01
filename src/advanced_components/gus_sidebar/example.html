@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Gugustinette Web Pack | Side Bar</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: 'SF Pro';
+                font-size: 1em;
+                color: whitesmoke;
+            }
+
+            .container {
+                width: 100vw;
+                height: 100vh;
+                background-color: #121212;
+                display: grid;
+                justify-items: center;
+                align-items: center;
+            }
+
+            .box {
+                cursor: pointer;
+            }
+            .box::part(box):hover {
+                background-color: #343434;
+            }
+
+            gus-sidebar gus-box::part(box) {
+                min-height: 100px;
+                min-width: 20px;
+            }
+        </style>
+
+        <script type="module" src="../../setup/gus_ui.js"></script>
+
+        <script type="module" src="JS/gus_sidebar.js"></script>
+        <script type="module" src="../../basic_components/gus_box/JS/gus_box.js"></script>
+    </head>
+    <body>
+        <gus-ui>
+            <gus-sidebar direction="left" push-ui="false">
+                <div>
+                    <gus-box content="Button 1" href="#"></gus-box>
+                    <gus-box content="Button 2" href="#"></gus-box>
+                    <gus-box content="Button 3" href="#"></gus-box>
+                    <gus-box content="Button 4" href="#"></gus-box>
+                    <gus-box content="Button 5" href="#"></gus-box>
+                    <gus-box content="Button 6" href="#"></gus-box>
+                    <gus-box content="Button 7" href="#"></gus-box>
+                    <gus-box content="Button 8" href="#"></gus-box>
+                </div>
+            </gus-sidebar>
+            <div class="container" id="container">
+                <gus-box content="Show SideBar" class="box" id="box"></gus-box>
+            </div>
+        </gus-ui>
+    </body>
+    <script src='example.js'></script>
+</html>

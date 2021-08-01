@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Gugustinette Web Pack | Loading Bar</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: 'SF Pro';
+                font-size: 1em;
+            }
+
+            body {
+                width: 100vw;
+                height: 100vh;
+                background-color: #121212;
+                display: grid;
+                justify-items: center;
+                align-items: center;
+            }
+
+            gus-loading-bar::part(loading-bar-holder) {
+                border: solid 1px grey;
+                width: 300px;
+            }
+
+            gus-loading-bar::part(loading-bar) {
+                background: red;
+            }
+
+        </style>
+        <script type="module" src="JS/gus_loading_bar.js"></script>
+    </head>
+    <body>
+        <gus-loading-bar mode="length-variation"></gus-loading-bar>
+    </body>
+</html>

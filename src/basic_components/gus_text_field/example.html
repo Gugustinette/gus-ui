@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Gugustinette Web Pack | Text Field</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: 'SF Pro';
+                font-size: 1em;
+                color: whitesmoke;
+            }
+
+            body {
+                width: 100vw;
+                height: 100vh;
+                background-color: #121212;
+                display: grid;
+                justify-items: center;
+                align-items: center;
+            }
+
+            gus-text-field::part(textfield) {
+                font-family: 'SF Pro';
+            }
+
+
+        </style>
+        <script type="module" src="JS/gus_text_field.js"></script>
+    </head>
+    <body>
+        <gus-text-field placeholder="Type some text here..." id="textfield">
+            <div slot="icon">Slot</div>
+        </gus-text-field>
+        
+        <script src="example.js"></script>
+    </body>
+</html>

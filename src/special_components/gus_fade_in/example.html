@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Gugustinette Web Pack | Fade In</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: 'SF Pro';
+                font-size: 1em;
+                color: whitesmoke;
+            }
+
+            body {
+                width: 100vw;
+                height: 300vh;
+                background-color: #121212;
+                display: grid;
+                justify-items: center;
+                align-items: center;
+                grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            }
+
+        </style>
+        <script type="module" src="JS/gus_fade_in.js"></script>
+    </head>
+    <body>
+        <gus-fade-in>
+            <div>
+                <h1>Title 1</h1>
+                <hr>
+                <h2>Description 1</h2>
+            </div>
+        </gus-fade-in>
+        <gus-fade-in direction="top" speed="5000">
+            <div>
+                <h1>Title 2</h1>
+                <hr>
+                <h2>Description 2</h2>
+            </div>
+        </gus-fade-in>
+        <gus-fade-in direction="bottom">
+            <div>
+                <h1>Title 3</h1>
+                <hr>
+                <h2>Description 3</h2>
+            </div>
+        </gus-fade-in>
+        <gus-fade-in direction="right">
+            <div>
+                <h1>Title 4</h1>
+                <hr>
+                <h2>Description 4</h2>
+            </div>
+        </gus-fade-in>
+        <gus-fade-in direction="left">
+            <div>
+                <h1>Title 5</h1>
+                <hr>
+                <h2>Description 5</h2>
+            </div>
+        </gus-fade-in>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Gugustinette Web Pack | Fade In</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: 'SF Pro';
+                font-size: 1em;
+                color: whitesmoke;
+            }
+
+            body {
+                width: 100vw;
+                height: 100vh;
+                background-color: #121212;
+                display: grid;
+                justify-items: center;
+                align-items: center;
+                grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            }
+
+            .button {
+                display: grid;
+                height: 100px;
+                width: 200px;
+                justify-items: center;
+                align-items: center;
+                background: #242424;
+                cursor: pointer;
+            }
+
+        </style>
+        <script type="module" src="JS/gus_focus_window.js"></script>
+    </head>
+    <body>
+        <gus-focus-window id="focus_window_example" opacity="0.8">
+            <div>
+                <h1>Title 1</h1>
+                <hr>
+                <h2>Description 1</h2>
+            </div>
+        </gus-focus-window>
+        <div class="button" id="button">Click Here</div>
+    </body>
+    <script src='example.js'></script>
+</html>

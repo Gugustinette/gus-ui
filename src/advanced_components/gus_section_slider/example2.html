@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Gugustinette Web Pack | Section Slider</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: 'SF Pro';
+                font-size: 1em;
+                color: whitesmoke;
+            }
+
+            body {
+                width: 100vw;
+                height: 100vh;
+                background-color: #121212;
+                display: grid;
+                justify-items: center;
+                align-items: center;
+            }
+
+            .section_1 {
+                display: grid;
+                height: 100%;
+                width: 100vw;
+                grid-template-columns: 1fr 1fr;
+                justify-items: center;
+                align-items: center;
+            }
+
+            .sub_section_1 {
+                display: grid;
+                height: 100%;
+                width: 80%;
+                grid-template-rows: 1fr 0.1fr 8fr;
+            }
+
+            h1 {
+                font-size: 4em;
+            }
+
+            hr {
+                height: min-content;
+            }
+
+            gus-section-slider.styled::part(section_slider) {
+                width: 100vw;
+            }
+
+            gus-section-slider.styled::part(slider) {
+                border-top: solid 1px grey;
+                height: 45px;
+            }
+            gus-section-slider.styled::part(slider_line) {
+                width: 50px;
+                min-width: 50px;
+                background: rgba(0,226,134,1);
+            }
+
+            gus-section-slider.styled::part(section) {
+                background: rgb(26,29,61);
+                background: radial-gradient(circle, rgba(26,29,61,1) 30%, rgba(0,226,134,1) 100%); 
+            }
+
+            gus-section-slider.styled::part(slider_button) {
+                background-color: #242424;
+                width: 70px;
+                min-width: 70px;
+            }
+
+            gus-section-slider.styled::part(slider_button_content) {
+                height: 30px;
+                width: 30px;
+                background-size: contain;
+                background-position: center;
+            }
+            gus-section-slider.styled::part(slider_button_content_1) {
+                background-image: url(../../../assets/icon_home.png);
+            }
+            gus-section-slider.styled::part(slider_button_content_2) {
+                background-image: url(../../../assets/icon_message.png);
+            }
+            gus-section-slider.styled::part(slider_button_content_3) {
+                background-image: url(../../../assets/icon_profil.png);
+            }
+            gus-section-slider.styled::part(slider_button_content_4) {
+                background-image: url(../../../assets/icon_settings.png);
+            }
+        </style>
+        <script type="module" src="JS/gus_section_slider.js"></script>
+    </head>
+    <body>
+        <gus-section-slider sections='[ 
+            {"title": ""}, 
+            {"title": ""}, 
+            {"title": ""},
+            {"title": ""}
+        ]' class="styled" inverted="true">
+            <div slot="section_1" class="section_1">
+                <div class="sub_section_1">
+                    <h1>Title 1</h1>
+                    <hr>
+                    <h2>Description 1</h2>
+                </div>
+                <div class="sub_section_1">
+                    <h1>Title 2</h1>
+                    <hr>
+                    <h2>Description 2</h2>
+                </div>
+            </div>
+            <div slot="section_2" class="section_1">
+                <div class="sub_section_1">
+                    <h1>Title 3</h1>
+                    <hr>
+                    <h2>Description 3</h2>
+                </div>
+                <div class="sub_section_1">
+                    <h1>Title 4</h1>
+                    <hr>
+                    <h2>Description 4</h2>
+                </div>
+            </div>
+            <div slot="section_3" class="section_1">
+                <div class="sub_section_1">
+                    <h1>Title 5</h1>
+                    <hr>
+                    <h2>Description 5</h2>
+                </div>
+                <div class="sub_section_1">
+                    <h1>Title 6</h1>
+                    <hr>
+                    <h2>Description 6</h2>
+                </div>
+            </div>
+            <div slot="section_4" class="section_1">
+                <div class="sub_section_1">
+                    <h1>Title 7</h1>
+                    <hr>
+                    <h2>Description 7</h2>
+                </div>
+                <div class="sub_section_1">
+                    <h1>Title 8</h1>
+                    <hr>
+                    <h2>Description 8</h2>
+                </div>
+            </div>
+        </gus-section-slider>
+    </body>
+</html>

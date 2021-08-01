@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Gugustinette Web Pack | Data Table</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: 'SF Pro';
+                font-size: 1em;
+                color: whitesmoke;
+            }
+
+            body {
+                width: 100vw;
+                height: 100vh;
+                background-color: #121212;
+                display: grid;
+                justify-items: center;
+                align-items: center;
+            }
+            
+        </style>
+        <script type="module" src="JS/gus_data_table.js"></script>
+    </head>
+    <body>
+        <gus-data-table data='
+        [
+            {"Title": "Harry Potter", "Description": "A good choice to start", "ID": 234},
+            {"Title": "Harry Potter 2", "Description": "Better than the first one", "ID": 2379},
+            {"Title": "Up to date", "Description": "Not even up to date", "ID": 998},
+            {"Title": "Up to I Think I egt it ri date", "Description": "Not evendzdzdiahduahiu up to date", "ID": 998},
+            {"Title": "Up to I Think I egt it ri date", "Description": "Not evendzdzdiahduahiu up to datzdzdiahduahiu up to zdzdiahduahiu up to zdzdiahduahiu up to e", "ID": 998}
+        ]' display-limit="3">
+        </gus-data-table>
+    </body>
+</html>

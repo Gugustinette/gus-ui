@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Gugustinette Web Pack | Tool Tip</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: 'SF Pro';
+                font-size: 1em;
+                color: whitesmoke;
+            }
+
+            body {
+                width: 100vw;
+                height: 100vh;
+                background-color: #121212;
+                display: grid;
+                justify-items: center;
+                align-items: center;
+            }
+        </style>
+        <script type="module" src="JS/gus_tooltip.js"></script>
+        <script type="module" src="../../basic_components/gus_box/JS/gus_box.js"></script>
+    </head>
+    <body>
+        <gus-tooltip content="Usefull Tooltip">
+            <gus-box content="Tooltip Button" href="#"></gus-box>
+        </gus-tooltip>
+        <gus-tooltip content="Usefull Tooltip" delay="500">
+            <gus-box content="Delayed Tooltip Button" href="#"></gus-box>
+        </gus-tooltip>
+    </body>
+</html>

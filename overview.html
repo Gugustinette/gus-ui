@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8;"/>
+        <title>Gus UI | Overview</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+
+        <link rel="stylesheet" href="overview.css">
+
+        <script type="module" src="dist/gus_ui.js"></script>
+    </head>
+    <body>
+        <gus-ui mode="dark" color-dark="#BB86FC" color-light="#6200EE">
+            <gus-focus-window id="focus-window">
+                <div>
+                    <gus-box content="Here is a focus window"></gus-box>
+                </div>
+            </gus-focus-window>
+
+            <gus-sidebar id="sidebar" direction="left" push-ui="true">
+            </gus-sidebar>
+    
+            <gus-section-slider id="main" inverted="false" sections='[
+                {"title": "Page 1"},
+                {"title": "Page 2"}, 
+                {"title": "Page 3"},
+                {"title": "Page 4"},
+                {"title": "Page 5"},
+                {"title": "Page 6"},
+                {"title": "Page 7"},
+                {"title": "Page 8"},
+                {"title": "Page 9"},
+                {"title": "Page 10"},
+                {"title": "Page 11"},
+                {"title": "Page 12"}
+            ]'>
+                <div slot="section_1" class="section_1">
+                    <div class="sub_section_1">
+                        <gus-title>Progress Bar</gus-title>
+                        <hr>
+                        <gus-progress-bar filling="80" display="true"></gus-progress-bar>                
+                    </div>
+                    <div class="sub_section_1">
+                        <gus-title>Checkbox</gus-title>
+                        <hr>
+                        <div>
+                            <gus-checkbox></gus-checkbox>
+                            <gus-checkbox content="Checkbox 1"></gus-checkbox>
+                            <gus-checkbox content="Checkbox 2" checked="true"></gus-checkbox>
+                        </div>
+                    </div>
+                    <div class="sub_section_1">
+                        <gus-title>Switch</gus-title>
+                        <hr>
+                        <gus-switch checked="true"></gus-switch>
+                        <gus-switch disabled="true"></gus-switch>
+                    </div>
+                    <div class="sub_section_1">
+                        <gus-title>Box</gus-title>
+                        <hr>
+                        <div style="display: grid; height: 40%;">
+                            <gus-box content="Box"></gus-box>
+                            <gus-box content="Clickable Box" href="#"></gus-box>
+                        </div>
+                    </div>
+                </div>
+                <div slot="section_2" class="section_1">
+                    <div class="sub_section_1">
+                        <gus-title>SideBar</gus-title>
+                        <hr>
+                        <gus-box content="Click here !" id="show-sidebar"></gus-box>
+                    </div>
+                    <div class="sub_section_1">
+                        <gus-title>Focus Window</gus-title>
+                        <hr>
+                        <gus-box content="Click here !" id="show-focus-window"></gus-box>
+                    </div>
+                    <div class="sub_section_1">
+                        <gus-title>Slider</gus-title>
+                        <hr>
+                        <gus-slider type="int"></gus-slider>
+                    </div>
+                    <div class="sub_section_1">
+                        <gus-title>Chips</gus-title>
+                        <hr>
+                        <div>
+                            <gus-chips content="Normal Chips"></gus-chips>
+                            <gus-chips content="Check Chips" check-visible="true" ></gus-chips>
+                            <gus-chips content="Cross Chips" cross-visible="true"></gus-chips>
+                        </div>
+                    </div>
+                </div>
+                <div slot="section_3" class="section_2">
+                    <div class="sub_section_1">
+                        <gus-title>Date Picker</gus-title>
+                        <hr>
+                        <gus-date-picker></gus-date-picker>
+                    </div>
+                    <div class="sub_section_1">
+                        <gus-title>Time Picker</gus-title>
+                        <hr>
+                        <gus-time-picker></gus-time-picker>
+                    </div>
+                </div>
+                <div slot="section_4" class="section_2">
+                    <div class="sub_section_1">
+                        <gus-title>Drop-Down Section</gus-title>
+                        <hr>
+                        <gus-drop-down-section content="Click here">
+                            <gus-box content="Element 1" class="styled"></gus-box>
+                            <gus-box content="Element 2" class="styled"></gus-box>
+                            <gus-box content="Element 3" class="styled"></gus-box>
+                            <gus-box content="Element 4" class="styled"></gus-box>
+                        </gus-drop-down-section>
+                    </div>
+                    <div class="sub_section_1">
+                        <gus-title>Switch Box</gus-title>
+                        <hr>
+                        <div>
+                            <!--Switch On-->
+                            <gus-switch-box content="State 1" checked="true"></gus-switch-box>
+    
+                            <!--Switch Disabled-->
+                            <gus-switch-box content="State 2" checked="false" disabled="true"></gus-switch-box>
+                        </div>
+                    </div>
+                </div>
+                <div slot="section_5" class="section_2">
+                    <div class="sub_section_1">
+                        <gus-title>Range Slider</gus-title>
+                        <hr>
+                        <gus-range-slider id="range-slider-example" int-start="10" int-end="20" round-button-position="false"></gus-range-slider>
+                    </div>
+                    <div class="sub_section_1">
+                        <gus-title>Radio Button</gus-title>
+                        <hr>
+                        <gus-radio-button-list id="rblist-example">
+                            <gus-radio-button content="State 1"></gus-radio-button>
+                            <gus-radio-button content="State 2"></gus-radio-button>
+                            <gus-radio-button content="State 3"></gus-radio-button>
+                            <gus-radio-button content="State 4"></gus-radio-button>
+                        </gus-radio-button-list>
+                    </div>
+                </div>
+                <div slot="section_6" class="section_3">
+                    <div class="sub_section_1">
+                        <gus-title>Stepper</gus-title>
+                        <hr>
+                        <gus-stepper orientation="horizontal" step-link="full" steps='[
+                            {"title": "Step 1"},
+                            {"title": "Step 2"},
+                            {"title": "Step 3"}
+                        ]'>
+                            </gus-stepper>
+                    </div>
+                </div>
+                <div slot="section_7" class="section_2">
+                    <div class="sub_section_1">
+                        <gus-title>Tooltip</gus-title>
+                        <hr>
+                        <gus-tooltip content="This is a tooltip">
+                            <gus-button content="Hover this button"></gus-button>
+                        </gus-tooltip>
+                    </div>
+                    <div class="sub_section_1">
+                        <gus-title>Button</gus-title>
+                        <hr>
+                        <div>
+                            <gus-button></gus-button>
+                            <gus-button outlined="true"></gus-button>
+                            <gus-button noborder="true"></gus-button>
+                        </div>
+                    </div>
+                </div>
+                <div slot="section_8" class="section_2">
+                    <div class="sub_section_1">
+                        <gus-title>Combobox</gus-title>
+                        <hr>
+                        <gus-combobox content='
+                            [
+                                "Option 1",
+                                "Option 2",
+                                "Option 3",
+                                "Option 4",
+                                "Option 5",
+                                "Option 6"
+                            ]
+                        '></gus-combobox>
+                    </div>
+                    <div class="sub_section_1">
+                        <gus-title>Card</gus-title>
+                        <hr>
+                        <div>
+                            <gus-card
+                                label-title="Gugustinette"
+                                label-description="Un gars super"
+                                >
+                            </gus-card>
+                        </div>
+                    </div>
+                </div>
+                <div slot="section_9" class="section_2">
+                    <div class="sub_section_1">
+                        <gus-title>TextField</gus-title>
+                        <hr>
+                        <gus-text-field placeholder="Type some text here..."></gus-text-field>
+                    </div>
+                    <div class="sub_section_1">
+                        <gus-title>TextArea</gus-title>
+                        <hr>
+                        <style>
+                            gus-text-area::part(textarea) {
+                                height: 300px;
+                                width: 500px;
+    
+                                font-family: inherit;
+                            }
+                        </style>
+                        <gus-text-area placeholder="Type some text here..."></gus-text-area>
+                    </div>
+                </div>
+                <div slot="section_10" class="section_3">
+                    <div class="sub_section_1">
+                        <gus-title>Carousel</gus-title>
+                        <hr>
+                        <gus-carousel image-collection='
+                        ["assets/gugustinette_img1.png",
+                        "assets/gugustinette_img2.png",
+                        "assets/gugustinette_img3.jpg"
+                        ]' infinite="true" auto-scrolling="true">
+                        </gus-carousel>
+                    </div>
+                </div>
+                <div slot="section_11" class="section_2">
+                    <div class="sub_section_1">
+                        <gus-title>Dialog</gus-title>
+                        <hr>
+                        <gus-button id="button-dialog" content="Open Dialog"></gus-button>
+                    </div>
+                    <div class="sub_section_1">
+                        <gus-title>Alert Box</gus-title>
+                        <hr>
+                        <gus-button id="button-alertbox" content="Open AlertBox"></gus-button>
+                    </div>
+                </div>
+                <div slot="section_12" class="section_2">
+                    <div class="sub_section_1">
+                        <gus-title>Loading Bar</gus-title>
+                        <hr>
+                        <div>
+                            <gus-loading-bar></gus-loading-bar>
+                            <gus-loading-bar mode="length-variation"></gus-loading-bar>
+                        </div>
+                    </div>
+                    <div class="sub_section_1">
+                        <gus-title>Loading Circle</gus-title>
+                        <hr>
+                        <div>
+                            <gus-loading-circle></gus-loading-circle>
+                            <gus-loading-circle infinite="true"></gus-loading-circle>
+                        </div>
+                    </div>
+                </div>
+            </gus-section-slider>
+    
+            <style>
+                gus-fab::part(fab) {
+                    height: 80px;
+                    width: 80px;
+                }
+            </style>
+            <gus-fab>Fab</gus-fab>
+        </gus-ui>
+
+        <script type="module" src="overview.js"></script>
+    </body>
+</html>

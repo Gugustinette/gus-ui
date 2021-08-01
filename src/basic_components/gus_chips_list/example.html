@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Gugustinette Web Pack | Chips List</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: 'SF Pro';
+                font-size: 1em;
+                color: whitesmoke;
+            }
+
+            body {
+                width: 100vw;
+                height: 100vh;
+                background-color: #121212;
+                display: grid;
+                justify-items: center;
+                align-items: center;
+            }
+
+        </style>
+        <script type="module" src="../gus_chips/JS/gus_chips.js"></script>
+        <script type="module" src="JS/gus_chips_list.js"></script>
+    </head>
+    <body>
+
+        <gus-chips-list>
+            <gus-chips content="Truc 1"></gus-chips>
+            <gus-chips content="Truc 2"></gus-chips>
+            <gus-chips content="Truc 3"></gus-chips>
+        </gus-chips-list>
+
+        <gus-chips-list id="chips-list-example-check" type="check-chips">
+            <gus-chips check-visible="true" content="Truc 1"></gus-chips>
+            <gus-chips check-visible="true" content="Truc 2"></gus-chips>
+            <gus-chips check-visible="true" content="Truc 3"></gus-chips>
+        </gus-chips-list>
+
+        <gus-chips-list id="chips-list-example-cross" type="cross-chips">
+            <gus-chips cross-visible="true" content="Truc 1" auto-delete="true"></gus-chips>
+            <gus-chips cross-visible="true" content="Truc 2" auto-delete="true"></gus-chips>
+            <gus-chips cross-visible="true" content="Truc 3" auto-delete="true"></gus-chips>
+        </gus-chips-list>
+
+    </body>
+    <script src="example.js"></script>
+</html>
