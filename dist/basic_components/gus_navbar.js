@@ -79,7 +79,7 @@ template.innerHTML = `
 <div class="gus_navbar" part="navbar">
     <div class="gus_navbar_insert"></div>
     <div class="gus_navbar_mobile">
-        <slot class="gus_navbar_mobile_button" name="navbar_mobile_button">
+        <slot class="gus_navbar_mobile_button" name="navbar-mobile-button">
             <svg xmlns="http://www.w3.org/2000/svg" class="gus_navbar_mobile_icon" width="24" height="24" viewBox="0 0 24 24" fill="#F5F5F5"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3 18v-12l9 6-9 6z"/></svg>
         </slot>
     </div>

@@ -53,7 +53,7 @@ template.innerHTML = `
     <div class="gus_textfield_icon">
         <slot name="icon"></slot>
     </div>
-    <input type="textfield" class="gus_textfield_input" part="textfield_input">
+    <input type="textfield" class="gus_textfield_input" part="text-field-input">
     </input>
 </div>
 `

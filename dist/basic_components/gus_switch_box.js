@@ -75,8 +75,8 @@ template.innerHTML = `
 </style>
 <div class="gus_switch" part="switch">
     <p part="content"></p>
-    <div class="gus_switch_button_background" part="button_background">
-        <div class="gus_switch_button" part="button"></div>
+    <div class="gus_switch_button_background" part="switch-background">
+        <div class="gus_switch_button" part="switch"></div>
     </div>
 </div>
 `

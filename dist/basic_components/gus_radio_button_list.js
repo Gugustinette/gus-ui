@@ -8,7 +8,7 @@ template.innerHTML = `
     justify-items: center;
 }
 </style>
-<div class="gus_radiobuttonlist">
+<div class="gus_radiobuttonlist" part="radio-button-list">
     <slot></slot>
 </div>
 `

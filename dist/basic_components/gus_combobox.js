@@ -92,11 +92,11 @@ template.innerHTML = `
 
 </style>
 <div class="gus_combobox" part="combobox">
-    <div class="gus_combobox_content" part="combobox_content">
-        <p class="gus_combobox_content_text" part="combobox_content_text">Error No Content</p>
-        <svg class="gus_combobox_content_arrow" part="combobox_content_arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21 12l-18 12v-24z"/></svg>
+    <div class="gus_combobox_content" part="combobox-content">
+        <p class="gus_combobox_content_text" part="combobox-content-text">Error No Content</p>
+        <svg class="gus_combobox_content_arrow" part="combobox-content-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21 12l-18 12v-24z"/></svg>
     </div>
-    <div class="gus_combobox_elements" part="combobox_elements">
+    <div class="gus_combobox_elements" part="combobox-elements">
     </div>
 </div>
 `

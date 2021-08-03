@@ -2,7 +2,7 @@
 
 GusUI is a simple web component library which include easy support for dark/light themes, colors, customization, event handling and others.
 
-Official website : /
+Official website : http://gugustinette.com/gus-ui/index.html
 
 ## Install
 
@@ -15,7 +15,7 @@ npm install gus-ui
 ```html
 <head>
     ...
-    <script type="module" src="node_modules/gus-ui/gus_ui.js">
+    <script type="module" src="node_modules/gus-ui/gus_ui.js"></script>
 </head>
 ```
 
@@ -38,4 +38,4 @@ npm install gus-ui
 
 ## Documentation
 
-Full documentation can be found at : /
+Full documentation can be found at : http://gugustinette.com/gus-ui/documentation/overview/intro.html
