@@ -5,7 +5,7 @@ template.innerHTML = `
 .gus_progress_bar {
     height: 30px;
     width: 500px;
-    background: var(--gus-ui-color-background);
+    background: var(--gus-ui-color-surface-hover);
     border-radius: 20px;
     display: grid;
     justify-items: center;
