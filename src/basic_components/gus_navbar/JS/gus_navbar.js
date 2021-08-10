@@ -55,7 +55,7 @@ template.innerHTML = `
 @media screen and (max-aspect-ratio: 9/9) {
     .gus_navbar {
         background: rgba(0, 0, 0, 0);
-
+        
         height: auto;
         width: 50vw;
 
@@ -77,9 +77,9 @@ template.innerHTML = `
 }
 </style>
 <div class="gus_navbar" part="navbar">
-    <div class="gus_navbar_insert"></div>
+    <slot></slot>
     <div class="gus_navbar_mobile">
-        <slot class="gus_navbar_mobile_button" name="navbar_mobile_button">
+        <slot class="gus_navbar_mobile_button" name="navbar-mobile-button">
             <svg xmlns="http://www.w3.org/2000/svg" class="gus_navbar_mobile_icon" width="24" height="24" viewBox="0 0 24 24" fill="#F5F5F5"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3 18v-12l9 6-9 6z"/></svg>
         </slot>
     </div>
@@ -139,10 +139,6 @@ export class GusNavBar extends HTMLElement {
 
     // Re-render the whole navbar
     render() {
-        for (let i = 0; i < this.nb_element; i++) {
-            let newElement = document.createElement('slot')
-            this.navbar.insertBefore(newElement, this.navbar_insert)
-        }
         this.renderMobile()
     }
 

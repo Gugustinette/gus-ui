@@ -56,7 +56,7 @@ template.innerHTML = `
     <div class="gus_radiobutton" part="radiobutton">
         <div class="gus_radiobutton_circle"></div>
     </div>
-    <p class="gus_radiobutton_content"></p>
+    <p class="gus_radiobutton_content" part="radiobutton-content"></p>
 </div>
 `
 

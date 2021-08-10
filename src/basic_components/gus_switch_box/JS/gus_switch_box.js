@@ -73,9 +73,9 @@ template.innerHTML = `
     color: #808080 !important;
 }
 </style>
-<div class="gus_switch" part="switch">
+<div class="gus_switch" part="switch-box">
     <p part="content"></p>
-    <div class="gus_switch_button_background" part="button_background">
+    <div class="gus_switch_button_background" part="switch-background">
         <div class="gus_switch_button" part="button"></div>
     </div>
 </div>

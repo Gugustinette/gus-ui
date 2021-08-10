@@ -23,7 +23,7 @@ template.innerHTML = `
     margin-left: 70px;
 }
 </style>
-<div class="gus_fade_in" part="fade_in">
+<div class="gus_fade_in" part="fade-in">
     <slot></slot>
 </div>
 `

@@ -22,7 +22,7 @@ template.innerHTML = `
     z-index: 100;
 }
 </style>
-<div class="gus_focus_window" part="focus_window">
+<div class="gus_focus_window" part="focus-window">
     <div class="gus_stop_event">
         <slot></slot>
     </div>

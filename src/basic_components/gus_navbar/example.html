@@ -28,15 +28,20 @@
                 min-width: 120px;
             }
         </style>
+
+        <script type="module" src="../../setup/gus_ui.js"></script>
         <script type="module" src="JS/gus_navbar.js"></script>
         <script type="module" src="../gus_box/JS/gus_box.js"></script>
+
     </head>
     <body>
-        <gus-navbar>
-            <gus-box title="Home" href="#"></gus-box>
-            <gus-box title="Galery" href="#"></gus-box>
-            <gus-box title="Portfolio" href="#"></gus-box>
-            <gus-box title="Contact" href="#"></gus-box>
-        </gus-navbar>
+        <gus-ui>
+            <gus-navbar>
+                <gus-box content="Home" href="#"></gus-box>
+                <gus-box content="Galery" href="#"></gus-box>
+                <gus-box content="Portfolio" href="#"></gus-box>
+                <gus-box content="Contact" href="#"></gus-box>
+            </gus-navbar>
+        </gus-ui>
     </body>
 </html>

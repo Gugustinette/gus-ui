@@ -46,7 +46,7 @@ template.innerHTML = `
     <div class="gus_checkbox" part="checkbox">
         <svg class="gus_checkbox_icon" part="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 640 640" width="640" height="640"><defs><path d="M271.49 457.07C277.94 463.53 277.94 474 271.49 480.46C266.09 485.86 260.02 491.92 254.24 497.71C248.86 503.08 240.15 503.08 234.78 497.71C199.75 462.68 105.96 368.89 71.32 334.25C64.87 327.79 64.87 317.32 71.32 310.86C76.72 305.47 81.21 300.98 86.61 295.58C93.06 289.12 103.53 289.12 109.99 295.58C144.63 330.22 236.85 422.44 271.49 457.07Z" id="i2MqTOYVi3"></path><path d="M274.42 476.03C266.6 483.84 253.94 483.84 246.13 476.03C241.23 471.13 238.75 468.65 233.37 463.27C226.87 456.78 226.87 446.24 233.37 439.74C295.32 377.79 467.52 205.6 528.99 144.12C536.8 136.31 549.47 136.31 557.28 144.12C562.18 149.03 562.76 149.6 567.66 154.5C575.47 162.31 575.47 174.98 567.66 182.79C506.18 244.27 335.89 414.56 274.42 476.03Z" id="e16sdqL2Uz"></path></defs><g><g><g><use xlink:href="#i2MqTOYVi3" opacity="1" fill="#f5f5f5" fill-opacity="1"></use></g><g><use xlink:href="#e16sdqL2Uz" opacity="1" fill="#f5f5f5" fill-opacity="1"></use></g></g></g></svg>
     </div>
-    <p class="gus_checkbox_content" part="checkbox-content"></p>
+    <p class="gus-checkbox-content"></p>
 </div>
 `
 

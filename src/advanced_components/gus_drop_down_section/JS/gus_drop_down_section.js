@@ -50,12 +50,12 @@ template.innerHTML = `
 }
 
 </style>
-<div class="gus_drop_down_section" part="drop_down_section">
-    <div class="gus_drop_down_section_title" part="drop_down_section_title">
-        <p class="gus_drop_down_section_title_text">Menu</p>
-        <svg class="gus_drop_down_section_title_arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21 12l-18 12v-24z"/></svg>
+<div class="gus_drop_down_section" part="drop-down-section">
+    <div class="gus_drop_down_section_title" part="drop-down-section-title">
+        <p class="gus_drop_down_section_title_text" part="drop-down-section-title-content">Menu</p>
+        <svg class="gus_drop_down_section_title_arrow" part="drop-down-section-title-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21 12l-18 12v-24z"/></svg>
     </div>
-    <div class="gus_drop_down_section_content" part="drop_down_section_content">
+    <div class="gus_drop_down_section_content" part="drop-down-section-content">
         <slot></slot>
     </div>
 </div>

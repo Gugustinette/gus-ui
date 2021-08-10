@@ -49,14 +49,14 @@ template.innerHTML = `
     transition: 0.4s;
 }
 </style>
-<div class="gus_section_slider" part="section_slider">
+<div class="gus_section_slider" part="section-slider">
     <div class="gus_slider" part="slider">
         <div class="gus_slider_display">
-            <div class="gus_slider_button_holder" part"slider_button_holder">
+            <div class="gus_slider_button_holder" part"slider-button-holder">
                 <div class="gus_slider_button_insert">
                 </div>
             </div>
-            <div class="gus_slider_line" part="slider_line"></div>
+            <div class="gus_slider_line" part="slider-line"></div>
         </div>
     </div>
     <div class="gus_section" part="section">

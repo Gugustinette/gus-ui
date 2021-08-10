@@ -40,7 +40,7 @@ template.innerHTML = `
 }
 
 </style>
-<div class="gus_switch_button_background" part="switch_background">
+<div class="gus_switch_button_background" part="switch-background">
     <div class="gus_switch_button" part="switch"></div>
 </div>
 `
