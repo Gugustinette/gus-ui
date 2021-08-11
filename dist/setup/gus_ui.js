@@ -6,9 +6,20 @@ template.innerHTML = `
     margin: 0;
     padding: 0;
 }
+.gus-ui {
+    width: 100vw;
+    height: 100vh;
+    background-color: #121212;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    overflow: hidden;
+}
 </style>
-<slot>
-</slot>
+<div class="gus-ui">
+    <slot>
+    </slot>
+</div>
 `
 
 export class GusUi extends HTMLElement {
