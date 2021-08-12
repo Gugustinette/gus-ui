@@ -26,8 +26,7 @@ template.innerHTML = `
 
     display: grid;
 
-    align-items: center;
-    justify-items: right;
+    place-items: center;
 }
 
 .gus_navbar_mobile_button {
@@ -35,7 +34,6 @@ template.innerHTML = `
     height: 70px;
     width: 70px;
     border-radius: 15px;
-    margin-right: 20px;
 
     cursor: pointer;
 }
@@ -57,7 +55,7 @@ template.innerHTML = `
         background: rgba(0, 0, 0, 0);
         
         height: auto;
-        width: 50vw;
+        min-width: 50vw;
 
         flex-direction: column;
 
@@ -69,6 +67,10 @@ template.innerHTML = `
 
     .gus_navbar_mobile {
         display: grid;
+        position: relative;
+
+        align-self: end;
+        min-width: 100px;
     }
     
     .gus_navbar_mobile_button {
