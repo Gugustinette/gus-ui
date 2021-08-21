@@ -9,7 +9,7 @@ template.innerHTML = `
 .gus-ui {
     width: 100vw;
     height: 100vh;
-    background-color: #121212;
+    background-color: var(--gus-ui-color-background);
     display: grid;
     justify-items: center;
     align-items: center;

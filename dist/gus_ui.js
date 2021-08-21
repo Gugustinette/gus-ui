@@ -35,6 +35,7 @@ import '/src/advanced_components/gus_section_slider/JS/gus_section_slider.js'
 import '/src/advanced_components/gus_sidebar/JS/gus_sidebar.js'
 import '/src/advanced_components/gus_stepper/JS/gus_stepper.js'
 import '/src/advanced_components/gus_time_picker/JS/gus_time_picker.js'
+import '/src/advanced_components/gus_timetable/JS/gus_timetable.js'
 import '/src/advanced_components/gus_tooltip/JS/gus_tooltip.js'
 
 // Text Components

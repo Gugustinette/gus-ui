@@ -35,7 +35,8 @@
                 {"title": "Page 9"},
                 {"title": "Page 10"},
                 {"title": "Page 11"},
-                {"title": "Page 12"}
+                {"title": "Page 12"},
+                {"title": "Page 13"}
             ]'>
                 <div slot="section_1" class="section_1">
                     <div class="sub_section_1">
@@ -263,6 +264,64 @@
                             <gus-loading-circle></gus-loading-circle>
                             <gus-loading-circle infinite="true"></gus-loading-circle>
                         </div>
+                    </div>
+                </div>
+                <div slot="section_13" class="section_3">
+                    <div class="sub_section_1">
+                        <gus-title>Time Table</gus-title>
+                        <hr>
+                        <gus-timetable content='[
+                        [
+                            {
+                                "title": "Task 1",
+                                "startHour": "8h",
+                                "endHour": "10h"
+                            }
+                        ], 
+                        [
+                            {
+                                "title": "Task 2",
+                                "startHour": "13h",
+                                "startMinutes": "15",
+                                "endHour": "13h",
+                                "endMinutes": "45"
+                            },
+                            {
+                                "title": "Task 3",
+                                "startHour": "14h",
+                                "endHour": "15h"
+                            }
+                        ],
+                        [
+                            {
+                                "title": "Task 4",
+                                "startHour": "9h",
+                                "endHour": "10h"
+                            },
+                            {
+                                "title": "Task 5",
+                                "startHour": "11h",
+                                "endHour": "11h",
+                                "endMinutes": "30"
+                            }
+                        ],
+                        [
+                            {
+                                "title": "Task 7",
+                                "startHour": "8h",
+                                "endHour": "12h"
+                            }
+                        ],
+                        [
+                            {
+                                "title": "Task 8",
+                                "startHour": "14h",
+                                "startMinutes": "25",
+                                "endHour": "15h",
+                                "endMinutes": "3"
+                            }
+                        ]
+                    ]'></gus-timetable>
                     </div>
                 </div>
             </gus-section-slider>
