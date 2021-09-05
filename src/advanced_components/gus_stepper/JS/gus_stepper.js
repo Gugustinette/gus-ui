@@ -186,7 +186,7 @@ template.innerHTML = `
     display: grid;
     justify-items: center;
     align-items: end;
-    width: 50px;
+    min-width: 50px;
 }
 
 .gus_step_horizontal_title p {

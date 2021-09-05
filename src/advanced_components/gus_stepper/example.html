@@ -22,17 +22,21 @@
             }
 
         </style>
+        <script type="module" src="../../setup/gus_ui.js"></script>
         <script type="module" src="JS/gus_stepper.js"></script>
     </head>
     <body>
-        <gus-stepper orientation="vertical" step-link="full" steps='[
-        {"title": "Step 1", "content": "A"},
-        {"title": "Step 2"}, 
-        {"title": "Step 3"}, 
-        {"title": "Step 4"},
-        {"title": "Step 5"}
-        ]' id="gus-stepper-test">
-        </gus-stepper>
+        <gus-ui>
+            <gus-stepper orientation="horizontal" step-link="full" steps='[
+            {"title": "Step 1", "content": "A"},
+            {"title": "Step 2"}, 
+            {"title": "Step 3"}, 
+            {"title": "Step 4"},
+            {"title": "Step 5"}
+            ]' id="gus-stepper-test">
+            </gus-stepper>
+        </gus-ui>
+
         <script src="example.js"></script>
     </body>
 </html>

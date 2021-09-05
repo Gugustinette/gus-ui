@@ -17,7 +17,4 @@ echo + Special Components Distribued
 cp src/setup/*.js dist/setup
 echo + Setup Distribued
 
-cp src/gus_ui.js dist
-echo + Import Distribued
-
 echo Distrib finished

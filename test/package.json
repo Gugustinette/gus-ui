@@ -1,0 +1,14 @@
+{
+  "name": "gus-ui-test-project",
+  "version": "1.0.0",
+  "description": "A test project for Gus UI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Augustin MERCIER \"Gugustinette\"",
+  "license": "MIT",
+  "dependencies": {
+    "gus-ui": "^1.0.12"
+  }
+}
