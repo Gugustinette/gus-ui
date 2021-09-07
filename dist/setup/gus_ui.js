@@ -16,7 +16,7 @@ template.innerHTML = `
     overflow: hidden;
 }
 </style>
-<div class="gus-ui">
+<div class="gus-ui" part="gus-ui">
     <slot>
     </slot>
 </div>
