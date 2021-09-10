@@ -66,6 +66,7 @@ export class GusUi extends HTMLElement {
                     break;
             }
         }
+        this.render()
     }
 
     // Define methods for gus-ui 'color-dark' attribute (String)

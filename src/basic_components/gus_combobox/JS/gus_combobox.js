@@ -71,6 +71,7 @@ template.innerHTML = `
     overflow: scroll;
 
     left: -1px;
+    background: var(--gus-ui-color-surface);
 
     transition: 0.2s;
 }
@@ -86,6 +87,8 @@ template.innerHTML = `
 
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+
+    z-index: 1000;
     
     transition: 0.2s;
 }
@@ -159,7 +162,9 @@ export class GusComboBox extends HTMLElement {
             switch(name) {
                 case 'content':
                     this.content = newVal
-                    this.selectedValue = this.content[0]
+                    if (this.content.indexOf(this.selectedValue) === -1) {
+                        this.selectedValue = this.content[0]
+                    }
                     this.render()
                     break;
                 case 'default-value':
