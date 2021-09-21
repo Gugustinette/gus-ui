@@ -98,6 +98,9 @@ export class GusUi extends HTMLElement {
 
     // Re-render the whole gus-ui
     render() {
+        document.body.style.margin = "0"
+        document.body.style.padding = "0"
+
         var style = document.documentElement.style
 
         if (this.mode === "dark") { // Dark Mode
