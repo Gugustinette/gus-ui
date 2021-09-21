@@ -122,6 +122,15 @@ export class GusButton extends HTMLElement {
         this.setAttribute('noborder', value)
     }
 
+    // Define methods for button 'type' attribute (String)
+    get type() {
+        return this.getAttribute('type')
+    }
+
+    set type(value) {
+        this.setAttribute('type', value)
+    }
+
     // Re-render the whole checkbox
     render() {
         this.button.innerHTML = `${this.content}`
@@ -135,6 +144,22 @@ export class GusButton extends HTMLElement {
                 this.button.classList.add("gus_button_noborder")
             }
         }
+
+        this.button.addEventListener("click", (e) => {
+            if (this.type === "submit") {
+                this.getParentForm(this).submit()
+            }
+        })
+    }
+
+    getParentForm(element) {
+        var parentForm = element.parentNode
+
+        while (parentForm.nodeName !== "FORM") {
+            parentForm = parentForm.parentNode
+        }
+
+        return parentForm
     }
 }
 

@@ -66,6 +66,8 @@ template.innerHTML = `
     display: grid;
     place-content: center;
 
+    text-align: center;
+
     border-bottom: solid 1px grey;
 }
 .cell-content {
@@ -255,7 +257,7 @@ export class GusTimeTable extends HTMLElement {
             day.classList.add('content-holder')
 
             day.innerHTML = `
-            <div class="cell-day" part="days">
+            <div class="cell-day" part="days" style="height: ${this.cellHeight}px">
             ${this.days[i]}
             </div>
             `
@@ -266,6 +268,7 @@ export class GusTimeTable extends HTMLElement {
                 var contentCell = document.createElement('div')
                 contentCell.classList.add('cell-content')
                 contentCell.setAttribute('part', 'content-cell')
+                contentCell.style.height = `${this.cellHeight}px`
                 day.appendChild(contentCell)
             }
 
@@ -360,6 +363,19 @@ export class GusTimeTable extends HTMLElement {
             length -= (startMinutes / 60 * this.cellHeight)
         }
         return length
+    }
+
+    getTasks() {
+        var tasks = []
+        for (var i = 0; i < this.daysElement.length; i++) {
+            tasks.push([])
+            for (var n = 0; n < this.daysElement[i].children.length; n++) {
+                if (this.daysElement[i].children[n].classList.contains("task")) {
+                    tasks[i].push(this.daysElement[i].children[n])
+                }
+            }
+        }
+        return tasks
     }
 
 }

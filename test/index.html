@@ -7,11 +7,17 @@
 
     <title>Gus Ui Test Project</title>
 
-    <script type="module" src="./node_modules/gus-ui/gus_ui.js"></script>
+    <script type="module" src="../src/gus_ui.js"></script>
 </head>
 <body>
     <gus-ui>
-        <gus-button content="Test Button"></gus-button>
+        <form action="/formulaire" method="get">
+            <gus-text-field></gus-text-field>
+
+            <br>
+
+            <gus-button content="Submit Form" type="submit"></gus-button>
+        </form>
     </gus-ui>
 </body>
 </html>
