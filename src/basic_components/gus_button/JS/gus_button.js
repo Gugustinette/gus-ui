@@ -63,6 +63,9 @@ export class GusButton extends HTMLElement {
 
         // ELEMENTS
         this.button = shadowRoot.querySelector('.gus_button')
+
+        // VARIABLES
+        this.firstRender = true
     }
 
     connectedCallback() {
@@ -145,11 +148,32 @@ export class GusButton extends HTMLElement {
             }
         }
 
-        this.button.addEventListener("click", (e) => {
-            if (this.type === "submit") {
-                this.getParentForm(this).submit()
-            }
-        })
+        if (this.firstRender) {
+            this.button.addEventListener("click", (e) => {
+                if (this.type === "submit") { // Form
+                    var form = this.getParentForm(this)
+    
+                    var fakeTextFields = form.getElementsByTagName("gus-text-field")
+    
+                    for (var i = 0; i < fakeTextFields.length; i++) {
+                        var realTextField = document.createElement("input")
+                        realTextField.type = "text"
+    
+                        realTextField.value = fakeTextFields[i].value
+
+                        realTextField.name = fakeTextFields[i].getAttribute("name")
+
+                        realTextField.style.display = "none"
+    
+                        form.appendChild(realTextField)
+                    }
+    
+                    form.submit()
+                }
+            })
+        }
+
+        this.firstRender = false
     }
 
     getParentForm(element) {

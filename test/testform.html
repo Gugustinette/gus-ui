@@ -11,7 +11,17 @@
 </head>
 <body>
     <gus-ui>
-        <gus-button content="Button"></gus-button>
+        <form action="/test/form.php" method="get">
+            <gus-text-field name="username" placeholder="Username"></gus-text-field>
+
+            <br>
+
+            <gus-text-field name="password" placeholder="Password"></gus-text-field>
+
+            <br>
+
+            <gus-button content="Submit Form" type="submit"></gus-button>
+        </form>
     </gus-ui>
 </body>
 </html>
