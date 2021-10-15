@@ -19,6 +19,8 @@ template.innerHTML = `
 
     cursor: pointer;
     transition: 0.1s;
+
+    border: none;
 }
 .gus_button:hover {
     background: var(--gus-ui-color-primary-hover);
@@ -46,8 +48,8 @@ template.innerHTML = `
     transition: 0.1s;
 }
 </style>
-<div class="gus_button" part="button">
-</div>
+<input type="button" class="gus_button" part="button">
+</input>
 `
 
 export class GusButton extends HTMLElement {
@@ -136,7 +138,7 @@ export class GusButton extends HTMLElement {
 
     // Re-render the whole checkbox
     render() {
-        this.button.innerHTML = `${this.content}`
+        this.button.value = `${this.content}`
         this.button.classList.remove("gus_button_outlined")
         this.button.classList.remove("gus_button_noborder")
         if (this.outlined) {

@@ -5,25 +5,16 @@
         <title>Gugustinette Web Pack | Button</title>
         <style>
             * {
-                margin: 0;
-                padding: 0;
                 font-family: 'SF Pro';
-                font-size: 1em;
-            }
-
-            body {
-                width: 100vw;
-                height: 100vh;
-                background-color: #121212;
-                display: grid;
-                justify-items: center;
-                align-items: center;
             }
 
         </style>
+        <script type="module" src="../../setup/gus_ui.js"></script>
         <script type="module" src="JS/gus_button.js"></script>
     </head>
     <body>
-        <gus-button content="Yes or no maybe click ok"></gus-button>
+        <gus-ui>
+            <gus-button content="Yes or no maybe click ok"></gus-button>
+        </gus-ui>
     </body>
 </html>
