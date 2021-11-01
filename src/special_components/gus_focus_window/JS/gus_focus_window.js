@@ -31,7 +31,7 @@ template.innerHTML = `
 
 export class GusFocusWindow extends HTMLElement {
     static get observedAttributes() {
-        return ['visible', 'opacity'];
+        return ['visible', 'opacity', 'close-on-click'];
     }
 
     constructor() {
@@ -53,12 +53,17 @@ export class GusFocusWindow extends HTMLElement {
         })
         
         this.focus_window.addEventListener('click', (e) => {
-            this.visible = this.visible == false
-            this.dispatchEvent(this.event_closed_window)
+            if (this.closeOnClick) {
+                this.visible = false
+                this.dispatchEvent(this.event_closed_window)
+            }
         })
     }
 
     connectedCallback() {
+        if (this.closeOnClick) {
+            this.closeOnClick = true;
+        }
         if (!this.visible) {
             this.visible = 'false'
         }
@@ -98,6 +103,16 @@ export class GusFocusWindow extends HTMLElement {
 
     set opacity(value) {
         this.setAttribute('opacity', value)
+    }
+
+    // Define methods for focus window 'closeOnClick' attribute (Boolean)
+    get closeOnClick() {
+        return this.getAttribute('close-on-click') == 'true'
+    }
+
+    set closeOnClick(value) {
+        this.setAttribute('close-on-click', value)
+        this.render()
     }
 
     // Re-render the whole focus window
