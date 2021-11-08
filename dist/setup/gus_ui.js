@@ -118,7 +118,20 @@ export class GusUi extends HTMLElement {
 
             style.setProperty('--gus-ui-color-error', '#CF6679')
 
-            style.setProperty('--gus-ui-color-on-primary', '#000000')
+            if (this.colorDark) {
+                var primaryConstrastWithBlack = this.contrast(this.hexToRgb(this.colorDark), [0, 0, 0])
+                var primaryConstrastWithWhite = this.contrast(this.hexToRgb(this.colorDark), [255, 255, 255])
+    
+                if (primaryConstrastWithBlack > primaryConstrastWithWhite) {
+                    style.setProperty('--gus-ui-color-on-primary', '#000000')
+                }
+                else {
+                    style.setProperty('--gus-ui-color-on-primary', '#FFFFFF')
+                }
+            }
+            else {
+                style.setProperty('--gus-ui-color-on-primary', '#FFFFFF')
+            }
 
             style.setProperty('--gus-ui-color-on-secondary', '#000000')
             style.setProperty('--gus-ui-color-on-background', '#FFFFFF')
@@ -148,7 +161,20 @@ export class GusUi extends HTMLElement {
 
             style.setProperty('--gus-ui-color-error', '#B00020')
 
-            style.setProperty('--gus-ui-color-on-primary', '#FFFFFF')
+            if (this.colorLight) {
+                var primaryConstrastWithBlack = this.contrast(this.hexToRgb(this.colorLight), [0, 0, 0])
+                var primaryConstrastWithWhite = this.contrast(this.hexToRgb(this.colorLight), [255, 255, 255])
+    
+                if (primaryConstrastWithBlack > primaryConstrastWithWhite) {
+                    style.setProperty('--gus-ui-color-on-primary', '#000000')
+                }
+                else {
+                    style.setProperty('--gus-ui-color-on-primary', '#FFFFFF')
+                }
+            }
+            else {
+                style.setProperty('--gus-ui-color-on-primary', '#000000')
+            }
 
             style.setProperty('--gus-ui-color-on-secondary', '#000000')
             style.setProperty('--gus-ui-color-on-background', '#000000')
@@ -194,6 +220,36 @@ export class GusUi extends HTMLElement {
         a=f.a,t=t.a,f=a>=0||t>=0,a=f?a<0?t:t<0?a:a*P+t*p:0;
         if(h)return"rgb"+(f?"a(":"(")+r+","+g+","+b+(f?","+m(a*1000)/1000:"")+")";
         else return"#"+(4294967296+r*16777216+g*65536+b*256+(f?m(a*255):0)).toString(16).slice(1,f?undefined:-2)
+    }
+
+    hexToRgb(hex) {
+        var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+        return result ? [
+          parseInt(result[1], 16),
+          parseInt(result[2], 16),
+          parseInt(result[3], 16)
+         ] : null;
+    }
+
+    // RGB luminance
+    luminance(r, g, b) {
+        var a = [r, g, b].map(function (v) {
+            v /= 255;
+            return v <= 0.03928
+                ? v / 12.92
+                : Math.pow( (v + 0.055) / 1.055, 2.4 );
+        });
+        return a[0] * 0.2126 + a[1] * 0.7152 + a[2] * 0.0722;
+    }
+
+    // Contrast between 2 colors
+    contrast(rgb1, rgb2) {
+        var lum1 = this.luminance(rgb1[0], rgb1[1], rgb1[2]);
+        var lum2 = this.luminance(rgb2[0], rgb2[1], rgb2[2]);
+        var brightest = Math.max(lum1, lum2);
+        var darkest = Math.min(lum1, lum2);
+        return (brightest + 0.05)
+             / (darkest + 0.05);
     }
 }
 

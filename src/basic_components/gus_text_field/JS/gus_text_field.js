@@ -60,7 +60,7 @@ template.innerHTML = `
 
 export class GusTextField extends HTMLElement {
     static get observedAttributes() {
-        return ['placeholder'];
+        return ['placeholder', 'value'];
     }
 
     constructor() {
@@ -78,6 +78,7 @@ export class GusTextField extends HTMLElement {
 
         // LISTENERS
         this.textfield_input.addEventListener("keyup", (e) => { // User typed something
+            this.setAttribute('value', this.textfield_input.value)
             this.dispatchEvent(this.event_text_modif)
         })
 
@@ -94,6 +95,8 @@ export class GusTextField extends HTMLElement {
             this.placeholder = ""
         }
 
+        this.setAttribute('value', null)
+
         this.render()
     }
 
@@ -104,8 +107,12 @@ export class GusTextField extends HTMLElement {
                 case 'placeholder':
                     this.placeholder = newVal
                     break;
+                case 'type':
+                    this.type = newVal
+                    break;
             }
         }
+        this.render();
     }
 
     // Define methods for textfield 'placeholder' attribute (String)
@@ -125,10 +132,26 @@ export class GusTextField extends HTMLElement {
     set value(newValue) {
         this.textfield_input.value = newValue
     }
+
+    // Define methods for textfield 'type' attribute (String)
+    get type() {
+        return this.getAttribute('type')
+    }
+
+    set type(value) {
+        this.setAttribute('type', value)
+    }
     
     // Re-render the whole textfield
     render() {
         this.textfield_input.placeholder = this.placeholder
+
+        if (this.type === "password") {
+            this.textfield_input.type = "password";
+        }
+        else {
+            this.textfield_input.type = "text";
+        }
     }
 
 }

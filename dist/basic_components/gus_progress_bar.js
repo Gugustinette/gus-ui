@@ -27,7 +27,7 @@ template.innerHTML = `
     align-self: flex-end;
 }
 .gus_progress_bar_display {
-    color: var(--gus-ui-color-on-background);
+    color: var(--gus-ui-color-on-primary);
     transition: 0.2s;
 }
 </style>

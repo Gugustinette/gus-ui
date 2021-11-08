@@ -89,63 +89,67 @@
                 background-image: url(../../../assets/icon_settings.png);
             }
         </style>
+        <script type="module" src="../../setup/gus_ui.js"></script>
         <script type="module" src="JS/gus_section_slider.js"></script>
     </head>
     <body>
-        <gus-section-slider sections='[ 
-            {"title": ""}, 
-            {"title": ""}, 
-            {"title": ""},
-            {"title": ""}
-        ]' class="styled" inverted="true">
-            <div slot="section_1" class="section_1">
-                <div class="sub_section_1">
-                    <h1>Title 1</h1>
-                    <hr>
-                    <h2>Description 1</h2>
+        <gus-ui>
+            <gus-section-slider sections='[ 
+                {"title": ""}, 
+                {"title": ""}, 
+                {"title": ""},
+                {"title": ""}
+            ]' class="styled" inverted="true">
+                <div slot="section_1" class="section_1">
+                    <div class="sub_section_1">
+                        <h1>Title 1</h1>
+                        <hr>
+                        <h2>Description 1</h2>
+                    </div>
+                    <div class="sub_section_1">
+                        <h1>Title 2</h1>
+                        <hr>
+                        <h2>Description 2</h2>
+                    </div>
                 </div>
-                <div class="sub_section_1">
-                    <h1>Title 2</h1>
-                    <hr>
-                    <h2>Description 2</h2>
+                <div slot="section_2" class="section_1">
+                    <div class="sub_section_1">
+                        <h1>Title 3</h1>
+                        <hr>
+                        <h2>Description 3</h2>
+                    </div>
+                    <div class="sub_section_1">
+                        <h1>Title 4</h1>
+                        <hr>
+                        <h2>Description 4</h2>
+                    </div>
                 </div>
-            </div>
-            <div slot="section_2" class="section_1">
-                <div class="sub_section_1">
-                    <h1>Title 3</h1>
-                    <hr>
-                    <h2>Description 3</h2>
+                <div slot="section_3" class="section_1">
+                    <div class="sub_section_1">
+                        <h1>Title 5</h1>
+                        <hr>
+                        <h2>Description 5</h2>
+                    </div>
+                    <div class="sub_section_1">
+                        <h1>Title 6</h1>
+                        <hr>
+                        <h2>Description 6</h2>
+                    </div>
                 </div>
-                <div class="sub_section_1">
-                    <h1>Title 4</h1>
-                    <hr>
-                    <h2>Description 4</h2>
+                <div slot="section_4" class="section_1">
+                    <div class="sub_section_1">
+                        <h1>Title 7</h1>
+                        <hr>
+                        <h2>Description 7</h2>
+                    </div>
+                    <div class="sub_section_1">
+                        <h1>Title 8</h1>
+                        <hr>
+                        <h2>Description 8</h2>
+                    </div>
                 </div>
-            </div>
-            <div slot="section_3" class="section_1">
-                <div class="sub_section_1">
-                    <h1>Title 5</h1>
-                    <hr>
-                    <h2>Description 5</h2>
-                </div>
-                <div class="sub_section_1">
-                    <h1>Title 6</h1>
-                    <hr>
-                    <h2>Description 6</h2>
-                </div>
-            </div>
-            <div slot="section_4" class="section_1">
-                <div class="sub_section_1">
-                    <h1>Title 7</h1>
-                    <hr>
-                    <h2>Description 7</h2>
-                </div>
-                <div class="sub_section_1">
-                    <h1>Title 8</h1>
-                    <hr>
-                    <h2>Description 8</h2>
-                </div>
-            </div>
-        </gus-section-slider>
+            </gus-section-slider>
+        </gus-ui>
+        
     </body>
 </html>

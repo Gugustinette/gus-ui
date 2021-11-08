@@ -261,7 +261,7 @@ template.innerHTML = `
 </style>
 <div class="gus_time_picker" part="time_picker">
 
-    <gus-focus-window class="gus_tp_window_keyboard">
+    <gus-focus-window close-on-click="true" class="gus_tp_window_keyboard">
         <div class="gus_wk">
             <div class="gus_wk_display">
                 <p>Enter an hour in the following format : "hh:mm/period"</p>

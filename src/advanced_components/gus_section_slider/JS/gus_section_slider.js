@@ -5,16 +5,25 @@ template.innerHTML = `
 .gus_section_slider {
     height: 100vh;
     width: 100vw;
-    background: var(--gus-ui-color-background);
     overflow: hidden;
+    position: relative;
 }
 
 .gus_slider {
+    position: absolute;
     display: flex;
     justify-content: center;
+    top: 0;
+    left: 0;
     height: 60px;
     width: 100%;
     background: var(--gus-ui-color-surface);
+    z-index: 10;
+}
+.gus_slider_offset {
+    height: 60px;
+    width: 100%;
+    z-index: 10;
 }
 
 .gus_slider_display {
@@ -42,26 +51,28 @@ template.innerHTML = `
     transition: 0.2s;
 }
 
+
+
 .gus_section {
     display: flex;
-    height: 90vh;
-    background: var(--gus-ui-color-background);
+    height: 100%;
     transition: 0.4s;
 }
+
 </style>
 <div class="gus_section_slider" part="section-slider">
+
     <div class="gus_slider" part="slider">
         <div class="gus_slider_display">
             <div class="gus_slider_button_holder" part"slider-button-holder">
-                <div class="gus_slider_button_insert">
-                </div>
             </div>
             <div class="gus_slider_line" part="slider-line"></div>
         </div>
     </div>
+
+    <div class="gus_slider_offset" part="slider">
+    </div>
     <div class="gus_section" part="section">
-        <div class="gus_section_content_insert">
-        </div>
     </div>
 </div>
 `
@@ -80,12 +91,11 @@ export class GusSectionSlider extends HTMLElement {
         // Assign elements to variables
         this.section_slider = shadowRoot.querySelector('.gus_section_slider')
         this.slider = shadowRoot.querySelector('.gus_slider')
+        this.slider_offset = shadowRoot.querySelector('.gus_slider_offset')
         this.slider_button_holder = shadowRoot.querySelector('.gus_slider_button_holder')
-        this.slider_button_insert = shadowRoot.querySelector('.gus_slider_button_insert')
         this.slider_line = shadowRoot.querySelector('.gus_slider_line')
 
         this.section = shadowRoot.querySelector('.gus_section')
-        this.section_content_insert = shadowRoot.querySelector('.gus_section_content_insert')
 
         this.slider_buttons = []
         this.section_sections = []
@@ -117,6 +127,7 @@ export class GusSectionSlider extends HTMLElement {
                     break;
                 case 'inverted':
                     this.inverted = newVal
+                    this.render();
                     break;
             }
         }
@@ -142,11 +153,20 @@ export class GusSectionSlider extends HTMLElement {
 
     // Re-render the whole section-slider
     render() {
+        this.slider_button_holder.innerHTML = "";
+
         this.createButtons()
         this.createSections()
 
         if (this.inverted) {
-            this.section_slider.insertBefore(this.section, this.slider)
+            this.section_slider.insertBefore(this.section, this.slider_offset)
+            this.slider.style.bottom = 0;
+            this.slider.style.top = "unset";
+        }
+        else {
+            this.slider.style.bottom = "unset";
+            this.slider.style.top = 0;
+            this.section_slider.insertBefore(this.slider_offset, this.section)
         }
         this.resize()
         this.replace()
@@ -154,7 +174,7 @@ export class GusSectionSlider extends HTMLElement {
 
     // Resize section-slider elements
     resize() {
-        this.section.style.height = `${this.section_slider.clientHeight - this.slider.clientHeight}px`
+        this.section.style.height = `${this.section_slider.clientHeight - this.slider_offset.clientHeight}px`
         this.section.style.width = `${this.sections.length * this.section_slider.clientWidth}px`
     }
 
@@ -196,6 +216,7 @@ export class GusSectionSlider extends HTMLElement {
             </style>
             <div class="gus_slider_button" part="slider_button slider_button_${i + 1}">
                 ${this.sections[i].title}
+                <slot class="gus_slider_button_content" name="slider_button_content_${i + 1}"></slot>
                 <div class="gus_slider_button_content" part="slider_button_content slider_button_content_${i + 1}"></div>
             </div>
             `
@@ -209,7 +230,7 @@ export class GusSectionSlider extends HTMLElement {
             })
             // Store button
             this.slider_buttons.push(newButton)
-            this.slider_button_holder.insertBefore(newButton, this.slider_button_insert)
+            this.slider_button_holder.appendChild(newButton)
         }
     }
 
@@ -223,7 +244,7 @@ export class GusSectionSlider extends HTMLElement {
             </slot>
             `
             this.section_sections.push(newSection)
-            this.section.insertBefore(newSection, this.section_content_insert)
+            this.section.appendChild(newSection)
         }
     }
 

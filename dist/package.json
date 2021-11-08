@@ -1,6 +1,6 @@
 {
   "name": "gus-ui",
-  "version": "1.0.20",
+  "version": "1.0.28",
   "description": "A simple web component library, including light/dark theme",
   "main": "gus_ui.js",
   "scripts": {

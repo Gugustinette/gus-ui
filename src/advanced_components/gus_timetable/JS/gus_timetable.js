@@ -90,6 +90,8 @@ template.innerHTML = `
     place-content: center;
     text-align: center;
 
+    color: var(--gus-ui-color-on-primary);
+
     background: var(--gus-ui-color-primary);
 }
 </style>

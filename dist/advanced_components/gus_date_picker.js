@@ -210,7 +210,7 @@ template.innerHTML = `
 }
 </style>
 
-<gus-focus-window class="gus_dp_window_year">
+<gus-focus-window close-on-click="true" class="gus_dp_window_year">
     <div class="gus_wy">
         <div class="gus_wy_display">
             <div>
@@ -242,7 +242,7 @@ template.innerHTML = `
     </div>
 </gus-focus-window>
 
-<gus-focus-window class="gus_dp_window_keyboard">
+<gus-focus-window close-on-click="true" class="gus_dp_window_keyboard">
     <div class="gus_wk">
         <div class="gus_wk_display">
             <p>Enter a date in following format : "mm/dd/yyyy"</p>
@@ -261,7 +261,7 @@ template.innerHTML = `
         <div class="gus_dp_top_sub">
             <div class="gus_dp_selected_date">Mon, Nov 17</div>
             <div class="gus_dp_switch_keyboard">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path style="fill: var(--gus-ui-color-on-background);" d="M7.127 22.564l-7.126 1.436 1.438-7.125 5.688 5.689zm-4.274-7.104l5.688 5.689 15.46-15.46-5.689-5.689-15.459 15.46z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path style="fill: var(--gus-ui-color-on-primary);" d="M7.127 22.564l-7.126 1.436 1.438-7.125 5.688 5.689zm-4.274-7.104l5.688 5.689 15.46-15.46-5.689-5.689-15.459 15.46z"/></svg>
             </div>
         </div>
     </div>
@@ -468,11 +468,12 @@ export class GusDatePicker extends HTMLElement {
             newDay.classList.add('gus_dp_day')
             if (this.date.getMonth() === this.selected_date.getMonth() && this.date.getFullYear() === this.selected_date.getFullYear() && i + 1 === this.selected_date.getDate()) {
                 newDay.classList.add('gus_dp_actual_day')
+                newDay.style.color = "var(--gus-ui-color-on-primary)"
             }
             newDay.addEventListener('click', (e) => {
                 let nbDay = parseInt(e.target.innerHTML)
                 this.selected_date = new Date(this.date.setDate(nbDay))
-                this.dispatchEvent(this.event_date_changed);
+                this.dispatchEvent(this.event_date_changed)
                 this.render()
             })
             this.days.push(newDay)
